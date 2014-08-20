@@ -321,7 +321,7 @@ which(correlations > 0.7, arr.ind = T) # plots and correlation table shows high 
 ## total_accel_belt   4   5
 ```
 
-The data preparation stage suggested non-linear effects, therefore no regression are used to model the data. Instead, a decision tree and a random forest model are trained. 
+The data preparation stage suggested non-linear effects, therefore no regression are used to model the data. Instead, a decision tree and a random forest model are trained. I expect the random forest to perform better than the decision tree. As random forest generally overfit less than decision trees. I expect random forest to perfom pretty well.
 
 
 ```r
@@ -553,7 +553,7 @@ varImpPlot(modelFitRF, n = 10)
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-42.png) 
 
-The random forest model performs far better, therefore this model is used to predict the values in the testset. The values are already submitted and it scored a 20 out of 20 correct. roll_belt is by far the best predictor, followed by yaw_belt, pitch_forearm and magnet_dumbbell_z.
+The random forest model performs far better than the tree, therefore this model is used to predict the values in the testset. The values are already submitted and it scored a 20 out of 20 correct. roll_belt is by far the best predictor, followed by yaw_belt, pitch_forearm and magnet_dumbbell_z.
 
 
 
